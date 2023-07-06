@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DD48872E-7B35-44EF-A5D3-6F1472F322CE}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.props.default = Directory.Build.props.default
+		Directory.Build.targets = Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixDestructibleFeatures", "FixDestructibleFeatures\FixDestructibleFeatures.csproj", "{5676C472-F104-489C-96F6-4BAFC5AB52C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixStoragePod", "FixStoragePod\FixStoragePod.csproj", "{0F6A37CE-1985-45BD-8E4E-E29536390DEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mergedown = Debug|Mergedown
+		Debug|Vanilla = Debug|Vanilla
+		Release|Mergedown = Release|Mergedown
+		Release|Vanilla = Release|Vanilla
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Debug|Mergedown.ActiveCfg = Debug|Mergedown
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Debug|Mergedown.Build.0 = Debug|Mergedown
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Debug|Vanilla.ActiveCfg = Debug|Vanilla
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Debug|Vanilla.Build.0 = Debug|Vanilla
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Release|Mergedown.ActiveCfg = Release|Mergedown
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Release|Mergedown.Build.0 = Release|Mergedown
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Release|Vanilla.ActiveCfg = Release|Vanilla
+		{5676C472-F104-489C-96F6-4BAFC5AB52C0}.Release|Vanilla.Build.0 = Release|Vanilla
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Debug|Mergedown.ActiveCfg = Debug|Mergedown
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Debug|Mergedown.Build.0 = Debug|Mergedown
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Debug|Vanilla.ActiveCfg = Debug|Vanilla
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Debug|Vanilla.Build.0 = Debug|Vanilla
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Mergedown.ActiveCfg = Release|Mergedown
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Mergedown.Build.0 = Release|Mergedown
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Vanilla.ActiveCfg = Release|Vanilla
+		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Vanilla.Build.0 = Release|Vanilla
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {617B8C10-19CC-4733-BFA7-1C5045E34CCB}
+	EndGlobalSection
+EndGlobal

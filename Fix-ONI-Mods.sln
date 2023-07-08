@@ -14,6 +14,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixDestructibleFeatures", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixStoragePod", "FixStoragePod\FixStoragePod.csproj", "{0F6A37CE-1985-45BD-8E4E-E29536390DEA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixDeconstructableProps", "FixDeconstructableProps\FixDeconstructableProps.csproj", "{84C52656-E104-48D7-8B58-FF091808BEDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixMoreTemperatureSensors", "FixMoreTemperatureSensors\FixMoreTemperatureSensors.csproj", "{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mergedown = Debug|Mergedown
@@ -38,6 +42,22 @@ Global
 		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Mergedown.Build.0 = Release|Mergedown
 		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Vanilla.ActiveCfg = Release|Vanilla
 		{0F6A37CE-1985-45BD-8E4E-E29536390DEA}.Release|Vanilla.Build.0 = Release|Vanilla
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Debug|Mergedown.ActiveCfg = Debug|Mergedown
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Debug|Mergedown.Build.0 = Debug|Mergedown
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Debug|Vanilla.ActiveCfg = Debug|Vanilla
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Debug|Vanilla.Build.0 = Debug|Vanilla
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Release|Mergedown.ActiveCfg = Release|Mergedown
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Release|Mergedown.Build.0 = Release|Mergedown
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Release|Vanilla.ActiveCfg = Release|Vanilla
+		{84C52656-E104-48D7-8B58-FF091808BEDB}.Release|Vanilla.Build.0 = Release|Vanilla
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Debug|Mergedown.ActiveCfg = Debug|Mergedown
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Debug|Mergedown.Build.0 = Debug|Mergedown
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Debug|Vanilla.ActiveCfg = Debug|Vanilla
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Debug|Vanilla.Build.0 = Debug|Vanilla
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Mergedown.ActiveCfg = Release|Mergedown
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Mergedown.Build.0 = Release|Mergedown
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Vanilla.ActiveCfg = Release|Vanilla
+		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Vanilla.Build.0 = Release|Vanilla
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

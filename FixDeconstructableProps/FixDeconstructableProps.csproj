@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyTitle>[Fix] Deconstructable Props (拆除更多遗迹修复版)</AssemblyTitle>
+    <FileVersion>1.0.0</FileVersion>
+    <RootNamespace>FixDeconstructableProps</RootNamespace>
+    <Description>Deconstructable Props（拆除更多遗迹）</Description>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <LastWorkingBuild>526233</LastWorkingBuild>
+    <Platforms>Vanilla;Mergedown</Platforms>
+  </PropertyGroup>
+</Project>

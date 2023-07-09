@@ -7,7 +7,7 @@ using NightLib.OnOverlayChange;
 namespace MoreTemperatureSensors
 {
     [SerializationConfig(MemberSerialization.OptIn)]
-    public class ItemTemperatureSensor : LogicTemperatureSensor, IOverlayChangeEvent
+    public class ItemTemperatureSensor : LogicTemperatureSensorCopy, IOverlayChangeEvent
     {
 
         private float lastThresholdTemperature;
@@ -147,7 +147,7 @@ namespace MoreTemperatureSensors
                 }
             }
             pooledList.Recycle();
-            ReadPrivate.Set(typeof(LogicTemperatureSensor), this, "averageTemp", this.activateOnWarmerThan ? this.lastTemperatureLow : this.lastTemperatureHigh);
+            ReadPrivate.Set(typeof(LogicTemperatureSensorCopy), this, "averageTemp", this.activateOnWarmerThan ? this.lastTemperatureLow : this.lastTemperatureHigh);
         }
     }
 }

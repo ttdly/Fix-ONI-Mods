@@ -43,7 +43,7 @@ namespace MoreTemperatureSensors
             buildingDef.AudioCategory = "Metal";
             buildingDef.SceneLayer = Grid.SceneLayer.Building;
 
-            buildingDef.LogicOutputPorts = buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
+            buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
                 OUTPUT_PORT
             };
 

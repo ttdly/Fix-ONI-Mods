@@ -25,8 +25,6 @@ namespace MoreTemperatureSensors
             return new Color32(255, 50, 0, 255);
         }
 
-        public static readonly LogicPorts.Port OUTPUT_PORT = LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_ACTIVE, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_INACTIVE, true);
-
         public override BuildingDef CreateBuildingDef()
         {
             int width = 1;
@@ -47,8 +45,8 @@ namespace MoreTemperatureSensors
             buildingDef.AudioCategory = "Metal";
             buildingDef.SceneLayer = Grid.SceneLayer.Building;
             buildingDef.RequiresPowerInput = true;
-            buildingDef.LogicInputPorts = new List<LogicPorts.Port>() { 
-                OUTPUT_PORT
+            buildingDef.LogicInputPorts = new List<LogicPorts.Port>() {
+                LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_ACTIVE, STRINGS.BUILDINGS.PREFABS.BATTERYSMART.LOGIC_PORT_INACTIVE, true)
             };
             GeneratedBuildings.RegisterWithOverlay(OverlayModes.Logic.HighlightItemIDs, ID);
             return buildingDef;

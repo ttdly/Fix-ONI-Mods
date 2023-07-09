@@ -7,7 +7,7 @@ using UnityEngine;
 namespace MoreTemperatureSensors
 {
     [SerializationConfig(MemberSerialization.OptIn)]
-    public class BuildingTemperatureSensor : LogicTemperatureSensor, IOverlayChangeEvent
+    public class BuildingTemperatureSensor : LogicTemperatureSensorCopy, IOverlayChangeEvent
     {
 
         private int cell;
@@ -83,7 +83,7 @@ namespace MoreTemperatureSensors
                     temperature = element.Temperature;
                 }   
             }
-            ReadPrivate.Set(typeof(LogicTemperatureSensor), this, "averageTemp", temperature);
+            ReadPrivate.Set(typeof(LogicTemperatureSensorCopy), this, "averageTemp", temperature);
         }
     }
 }

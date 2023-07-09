@@ -64,9 +64,9 @@ namespace MoreTemperatureSensors
             buildingDef.BaseTimeUntilRepair = -1f;
             buildingDef.SceneLayer = Grid.SceneLayer.TileMain;
             buildingDef.isKAnimTile = true;
-            buildingDef.isSolidTile = true;
+            //buildingDef.isSolidTile = true;
 
-            buildingDef.LogicOutputPorts = buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
+            buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
                 OUTPUT_PORT
             };
 
@@ -76,8 +76,9 @@ namespace MoreTemperatureSensors
             buildingDef.BlockTileShineAtlas = Assets.GetTextureAtlas("tiles_metal_spec");
             buildingDef.DecorBlockTileInfo = Assets.GetBlockTileDecorInfo("tiles_metal_tops_decor_info");
             buildingDef.DecorPlaceBlockTileInfo = Assets.GetBlockTileDecorInfo("tiles_metal_tops_decor_place_info");
-            buildingDef.ReplacementTags = new List<Tag>();
-            buildingDef.ReplacementTags.Add(GameTags.FloorTiles);
+            buildingDef.ReplacementTags = new List<Tag> {
+                GameTags.FloorTiles
+            };
             buildingDef.ConstructionOffsetFilter = BuildingDef.ConstructionOffsetFilter_OneDown;
             buildingDef.ViewMode = OverlayModes.Logic.ID;
             return buildingDef;
@@ -102,8 +103,10 @@ namespace MoreTemperatureSensors
             GeneratedBuildings.RemoveLoopingSounds(go);
             go.GetComponent<KPrefabID>().AddTag(GameTags.FloorTiles);
             GeneratedBuildings.MakeBuildingAlwaysOperational(go);
-            //GeneratedBuildings.RegisterLogicPorts(go, TileTemperatureSensorConfig.OUTPUT_PORT);
-            LogicTemperatureSensor logicTemperatureSensor = go.AddOrGet<LogicTemperatureSensorNoAnim>();
+            go.AddOrGet<LogicPorts>().outputPortInfo = new List<LogicPorts.Port>() {
+                OUTPUT_PORT
+            }.ToArray();
+            LogicTemperatureSensorCopy logicTemperatureSensor = go.AddOrGet<LogicTemperatureSensorNoAnim>();
             logicTemperatureSensor.manuallyControlled = false;
             logicTemperatureSensor.minTemp = 0f;
             logicTemperatureSensor.maxTemp = 9999f + 273;
@@ -113,12 +116,8 @@ namespace MoreTemperatureSensors
         {
             base.DoPostConfigureUnderConstruction(go);
             go.AddOrGet<KAnimGridTileVisualizer>();
-            //GeneratedBuildings.RegisterLogicPorts(go, TileTemperatureSensorConfig.OUTPUT_PORT);
         }
 
-        public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, TileTemperatureSensorConfig.OUTPUT_PORT);
-        }
+        public override void DoPostConfigurePreview(BuildingDef def, GameObject go){}
     }
 }

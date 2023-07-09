@@ -21,9 +21,9 @@ namespace MoreTemperatureSensors
                 ConduitPressureSensorGas.Setup();
                 ConduitPressureSensorLiquid.Setup();
 
-                SolidConduitElementSensorConfig.Setup();
-                SolidConduitGermsSensorConfig.Setup();
-                SolidConduitTemperatureSensorConfig.Setup();
+                //SolidConduitElementSensorConfig.Setup();
+                //SolidConduitGermsSensorConfig.Setup();
+                //SolidConduitTemperatureSensorConfig.Setup();
                 SolidConduitPressureSensorConfig.Setup();
 
                 BatterySensorConfig.Setup();

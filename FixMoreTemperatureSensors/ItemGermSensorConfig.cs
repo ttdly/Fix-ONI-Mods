@@ -55,7 +55,7 @@ namespace MoreTemperatureSensors
             buildingDef.AudioCategory = "Metal";
             buildingDef.SceneLayer = Grid.SceneLayer.Building;
 
-            buildingDef.LogicOutputPorts = buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
+            buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
                 OUTPUT_PORT
             };
 
@@ -65,21 +65,16 @@ namespace MoreTemperatureSensors
             return buildingDef;
         }
 
-        public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, OUTPUT_PORT);
-        }
+        public override void DoPostConfigurePreview(BuildingDef def, GameObject go){}
 
-        public override void DoPostConfigureUnderConstruction(GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, OUTPUT_PORT);
-        }
+        public override void DoPostConfigureUnderConstruction(GameObject go){}
 
         public override void DoPostConfigureComplete(GameObject go)
         {
             GeneratedBuildings.MakeBuildingAlwaysOperational(go);
-            //GeneratedBuildings.RegisterLogicPorts(go, OUTPUT_PORT);
-
+            go.AddOrGet<LogicPorts>().outputPortInfo = new List<LogicPorts.Port>() {
+                OUTPUT_PORT
+            }.ToArray();
             ItemGermSensor sensor = go.AddOrGet<ItemGermSensor>();
             sensor.Threshold = 0f;
             sensor.ActivateAboveThreshold = true;

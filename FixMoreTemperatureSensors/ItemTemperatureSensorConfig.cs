@@ -20,7 +20,7 @@ namespace MoreTemperatureSensors
         private static string LogicPortDescOn = "Sends an " + UI.FormatAsLink("Active", "LOGIC") + " signal while item " + UI.FormatAsLink("Temperature", "HEAT") +	" is within its configured Temperature Threshold range";
         private static string LogicPortDescOff = "Sends an " + UI.FormatAsLink("Standby", "LOGIC") + " signal while item " + UI.FormatAsLink("Temperature", "HEAT") + " is outside its configured Temperature Threshold range";
 
-        public static readonly LogicPorts.Port OUTPUT_PORT = LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), LogicPortDesc, LogicPortDescOn, LogicPortDescOff, false);
+        public static readonly LogicPorts.Port OUTPUT_PORT = LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), LogicPortDesc, LogicPortDescOn, LogicPortDescOff, true);
 
 
         public static void Setup()
@@ -56,7 +56,7 @@ namespace MoreTemperatureSensors
             buildingDef.AudioCategory = "Metal";
             buildingDef.SceneLayer = Grid.SceneLayer.Building;
 
-            buildingDef.LogicOutputPorts = buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
+            buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
                 OUTPUT_PORT
             };
 
@@ -66,21 +66,16 @@ namespace MoreTemperatureSensors
             return buildingDef;
         }
 
-        public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, ItemTemperatureSensorConfig.OUTPUT_PORT);
-        }
+        public override void DoPostConfigurePreview(BuildingDef def, GameObject go){}
 
-        public override void DoPostConfigureUnderConstruction(GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, ItemTemperatureSensorConfig.OUTPUT_PORT);
-        }
+        public override void DoPostConfigureUnderConstruction(GameObject go){}
 
         public override void DoPostConfigureComplete(GameObject go)
         {
             GeneratedBuildings.MakeBuildingAlwaysOperational(go);
-            //GeneratedBuildings.RegisterLogicPorts(go, ItemTemperatureSensorConfig.OUTPUT_PORT);
-            
+            go.AddOrGet<LogicPorts>().outputPortInfo = new List<LogicPorts.Port>() {
+                OUTPUT_PORT
+            }.ToArray();
             ItemTemperatureSensor logicTemperatureSensor = go.AddOrGet<ItemTemperatureSensor>();
             logicTemperatureSensor.manuallyControlled = false;
             logicTemperatureSensor.minTemp = 0f;

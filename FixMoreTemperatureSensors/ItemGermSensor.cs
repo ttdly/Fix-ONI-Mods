@@ -349,7 +349,7 @@ namespace MoreTemperatureSensors
 
         private void UpdateLogicCircuit()
         {
-            base.GetComponent<LogicPorts>().SendSignal(LogicSwitch.PORT_ID, (!this.switchedOn) ? 0 : 1);
+            base.GetComponent<LogicPorts>()?.SendSignal(LogicSwitch.PORT_ID, (!this.switchedOn) ? 0 : 1);
         }
 
         private void UpdateVisualState(bool force = false)

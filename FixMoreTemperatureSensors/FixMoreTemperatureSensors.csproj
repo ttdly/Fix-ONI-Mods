@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>Fix MoreTemperature Sensors</AssemblyTitle>
+    <AssemblyTitle>[Fix] Sensory Overload</AssemblyTitle>
     <FileVersion>1.0.0</FileVersion>
     <RootNamespace>FixMoreTemperatureSensors</RootNamespace>
-    <Description>More Temperature Sensors 修复版</Description>
+    <Description>Sensory Overload 修复版</Description>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <LastWorkingBuild>526233</LastWorkingBuild>
     <Platforms>Vanilla;Mergedown</Platforms>

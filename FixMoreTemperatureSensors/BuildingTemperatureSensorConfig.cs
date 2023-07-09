@@ -18,13 +18,10 @@ namespace MoreTemperatureSensors
         private static string LogicPortDescOn = "Sends an " + UI.FormatAsLink("Active", "LOGIC") + " signal while building " + UI.FormatAsLink("Temperature", "HEAT") + " is within its configured Temperature Threshold range";
         private static string LogicPortDescOff = "Sends an " + UI.FormatAsLink("Standby", "LOGIC") + " signal while building " + UI.FormatAsLink("Temperature", "HEAT") + " is outside its configured Temperature Threshold range";
 
-        public static readonly LogicPorts.Port OUTPUT_PORT = LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), LogicPortDesc, LogicPortDescOn, LogicPortDescOff, false);
-
 
         public static void Setup()
         {
             AddBuilding.AddStrings(ID, DisplayName, Description, Effect);
-
             AddBuilding.AddBuildingToPlanScreen("Automation", ID, LogicTemperatureSensorConfig.ID);
             AddBuilding.IntoTechTree("DupeTrafficControl", ID);
         }
@@ -55,31 +52,25 @@ namespace MoreTemperatureSensors
             buildingDef.PermittedRotations = PermittedRotations.R360;
 
             buildingDef.LogicOutputPorts = new List<LogicPorts.Port>() {
-                OUTPUT_PORT
+                LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), LogicPortDesc, LogicPortDescOn, LogicPortDescOff, true)
             };
 
             SoundEventVolumeCache.instance.AddVolume("switchthermal_kanim", "PowerSwitch_on", NOISE_POLLUTION.NOISY.TIER3);
             SoundEventVolumeCache.instance.AddVolume("switchthermal_kanim", "PowerSwitch_off", NOISE_POLLUTION.NOISY.TIER3);
-            GeneratedBuildings.RegisterWithOverlay(OverlayModes.Logic.HighlightItemIDs, BuildingTemperatureSensorConfig.ID);
+            GeneratedBuildings.RegisterWithOverlay(OverlayModes.Logic.HighlightItemIDs, ID);
             return buildingDef;
         }
 
-        public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, BuildingTemperatureSensorConfig.OUTPUT_PORT);
-        }
+        public override void DoPostConfigurePreview(BuildingDef def, GameObject go) {}
 
-        public override void DoPostConfigureUnderConstruction(GameObject go)
-        {
-            //GeneratedBuildings.RegisterLogicPorts(go, BuildingTemperatureSensorConfig.OUTPUT_PORT);
-        }
+        public override void DoPostConfigureUnderConstruction(GameObject go){}
 
         public override void DoPostConfigureComplete(GameObject go)
         {
-            go.AddOrGet<LogicPorts>();
             GeneratedBuildings.MakeBuildingAlwaysOperational(go);
-            //GeneratedBuildings.RegisterLogicPorts(go, BuildingTemperatureSensorConfig.OUTPUT_PORT);
-
+            go.AddOrGet<LogicPorts>().outputPortInfo = new List<LogicPorts.Port>() {
+                LogicPorts.Port.OutputPort(LogicSwitch.PORT_ID, new CellOffset(0, 0), LogicPortDesc, LogicPortDescOn, LogicPortDescOff, true)
+            }.ToArray();
             BuildingTemperatureSensor logicTemperatureSensor = go.AddOrGet<BuildingTemperatureSensor>();
             logicTemperatureSensor.manuallyControlled = false;
             logicTemperatureSensor.minTemp = 0f;

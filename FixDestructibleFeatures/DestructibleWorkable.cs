@@ -155,13 +155,14 @@ namespace FixPack.DestructibleFeatures {
                 }
 
                 Element e = Grid.Element[x];
-                if (!e.IsSolid && !e.id.ToString().ToUpperInvariant().Equals("UNOBTANIUM")) {
-                    LogManager.LogException("Element is expected to be neutronium & solid for the cell:" + x,
-                        new ArgumentException());
-                    return;
-                }
+                if (!e.IsSolid && !e.id.ToString().ToUpperInvariant().Equals("UNOBTANIUM")) continue;
+                    //if (!e.IsSolid && !e.id.ToString().ToUpperInvariant().Equals("UNOBTANIUM")) {
+                    //    LogManager.LogException("Element is expected to be neutronium & solid for the cell:" + x,
+                    //        new ArgumentException());
+                    //    return;
+                    //}
 
-                SimHashes replaceElement = SimHashes.Obsidian;
+                    SimHashes replaceElement = SimHashes.Obsidian;
 
                 if (!SingletonOptions<Option>.Instance.ReplaceNeutroniumWithObsidian)
                     replaceElement = SimHashes.Vacuum;

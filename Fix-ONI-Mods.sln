@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixDeconstructableProps", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixMoreTemperatureSensors", "FixMoreTemperatureSensors\FixMoreTemperatureSensors.csproj", "{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixStartWithAllResearch", "FixStartWithAllResearch\FixStartWithAllResearch.csproj", "{2A15FCFC-3A9E-4866-A930-2F195316CC5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mergedown = Debug|Mergedown
@@ -58,6 +60,14 @@ Global
 		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Mergedown.Build.0 = Release|Mergedown
 		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Vanilla.ActiveCfg = Release|Vanilla
 		{B8028F2A-5CB2-4827-A8C3-71358E0F75CC}.Release|Vanilla.Build.0 = Release|Vanilla
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Debug|Mergedown.ActiveCfg = Debug|Mergedown
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Debug|Mergedown.Build.0 = Debug|Mergedown
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Debug|Vanilla.ActiveCfg = Debug|Vanilla
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Debug|Vanilla.Build.0 = Debug|Vanilla
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Release|Mergedown.ActiveCfg = Release|Mergedown
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Release|Mergedown.Build.0 = Release|Mergedown
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Release|Vanilla.ActiveCfg = Release|Vanilla
+		{2A15FCFC-3A9E-4866-A930-2F195316CC5A}.Release|Vanilla.Build.0 = Release|Vanilla
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,3 +76,5 @@ Global
 		SolutionGuid = {617B8C10-19CC-4733-BFA7-1C5045E34CCB}
 	EndGlobalSection
 EndGlobal
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixFriedLiceloaf", "FixFriedLiceloaf\FixFriedLiceloaf.csproj", "{0E3E2A50-51FD-45AE-B51B-B3E27537009E}"
+EndProject

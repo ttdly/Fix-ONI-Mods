@@ -76,5 +76,3 @@ Global
 		SolutionGuid = {617B8C10-19CC-4733-BFA7-1C5045E34CCB}
 	EndGlobalSection
 EndGlobal
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixFriedLiceloaf", "FixFriedLiceloaf\FixFriedLiceloaf.csproj", "{0E3E2A50-51FD-45AE-B51B-B3E27537009E}"
-EndProject

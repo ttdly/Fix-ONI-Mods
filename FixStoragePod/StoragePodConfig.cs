@@ -42,7 +42,7 @@ namespace FixPack.StoragePod {
             storage.showDescriptor = true;
             System.Collections.Generic.List<Tag> storedItems = new System.Collections.Generic.List<Tag>();
             storedItems.AddRange(STORAGEFILTERS.NOT_EDIBLE_SOLIDS);
-            if (SingletonOptions<Option>.Instance.podStoresFood) {
+            if (SingletonOptions<Option>.Instance.PodStoresFood) {
                 storedItems.AddRange(STORAGEFILTERS.FOOD);
             }
             storage.SetDefaultStoredItemModifiers(Storage.StandardSealedStorage);
@@ -52,7 +52,7 @@ namespace FixPack.StoragePod {
             //storage.allowSublimation = false;
             go.AddOrGet<CopyBuildingSettings>().copyGroupTag = GameTags.StorageLocker;
             go.AddOrGet<StorageLocker>();
-            go.GetComponent<Storage>().capacityKg = SingletonOptions<Option>.Instance.podCapacity;
+            go.GetComponent<Storage>().capacityKg = SingletonOptions<Option>.Instance.PodCapacity;
         }
 
         public override void DoPostConfigureComplete(GameObject go) {

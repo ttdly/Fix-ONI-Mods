@@ -10,6 +10,7 @@ namespace FixPack {
                     public static LocString OPTION1 = (LocString)"Pod Capacity";
                     public static LocString OPTION2 = (LocString)"Cool Pod Capacity";
                     public static LocString OPTION3 = (LocString)"Pod Stores Food";
+                    public static LocString OPTION4 = (LocString)"Cool Pod Temperature";
                 }
             }
         }

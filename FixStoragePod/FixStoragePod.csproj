@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>Fix Storage Pod</AssemblyTitle>
+    <AssemblyTitle>[Fix] Storage Pod</AssemblyTitle>
     <FileVersion>1.0.0</FileVersion>
     <RootNamespace>FixStoragePod</RootNamespace>
     <Description>Fix Storage Pod</Description>

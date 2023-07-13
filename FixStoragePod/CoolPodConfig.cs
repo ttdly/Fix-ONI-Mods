@@ -58,15 +58,16 @@ namespace FixPack.StoragePod {
             //storage.allowSublimation = false;
             go.AddOrGet<CopyBuildingSettings>().copyGroupTag = GameTags.StorageLocker;
 
-            go.GetComponent<Storage>().capacityKg = SingletonOptions<Option>.Instance.coolPodCapacity;
+            go.GetComponent<Storage>().capacityKg = SingletonOptions<Option>.Instance.CoolPodCapacity;
             Prioritizable.AddRef(go);
             go.AddOrGet<TreeFilterable>();
             go.AddOrGet<FoodStorage>();
             go.AddOrGet<Refrigerator>();
             RefrigeratorController.Def def = go.AddOrGetDef<RefrigeratorController.Def>();
             def.powerSaverEnergyUsage = 20f;
-            def.coolingHeatKW = 0.0f;
-            def.steadyHeatKW = 0.0f;
+            def.coolingHeatKW = 2f;
+            def.steadyHeatKW = 0.5f;
+            def.simulatedInternalTemperature -= SingletonOptions<Option>.Instance.CoolPodCapacityTemperature;
             go.AddOrGet<UserNameable>();
             go.AddOrGet<DropAllWorkable>();
         }

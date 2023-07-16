@@ -19,7 +19,7 @@ namespace FixPack {
         [JsonProperty]
         public bool PodStoresFood { get; set; } = false;
 
-        [Option("STRINGS.UI.FIX_PACK.STORAGE_POD.OPTION3", "What is the cooling temperature in degrees below zero?", Format = "F0")]
+        [Option("STRINGS.UI.FIX_PACK.STORAGE_POD.OPTION4", "What is the cooling temperature in degrees below zero?", Format = "F0")]
         [JsonProperty]
         [Limit(0, 50)]
         public float CoolPodCapacityTemperature { get; set; } = 18f;

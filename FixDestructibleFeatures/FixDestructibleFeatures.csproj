@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>[Fix] Destructible Features (拆泉模组修复版)</AssemblyTitle>
-    <FileVersion>2.0.0</FileVersion>
+    <FileVersion>2.0.1</FileVersion>
     <RootNamespace>FixDestructibleFeatures</RootNamespace>
     <Description>拆泉模组修复版</Description>
-    <AssemblyVersion>2.0.0</AssemblyVersion>
-    <LastWorkingBuild>526233</LastWorkingBuild>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <LastWorkingBuild>659901</LastWorkingBuild>
     <Platforms>Vanilla;Mergedown</Platforms>
   </PropertyGroup>
 </Project>

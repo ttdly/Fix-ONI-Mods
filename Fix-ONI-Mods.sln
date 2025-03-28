@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DD48872E
 		Directory.Build.props = Directory.Build.props
 		Directory.Build.props.default = Directory.Build.props.default
 		Directory.Build.targets = Directory.Build.targets
+		Directory.Build.props.user = Directory.Build.props.user
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixDestructibleFeatures", "FixDestructibleFeatures\FixDestructibleFeatures.csproj", "{5676C472-F104-489C-96F6-4BAFC5AB52C0}"
